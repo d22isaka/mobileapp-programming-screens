@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ShowActivity.class);
                 intent.putExtra("name", "Daniel");
-                intent.putExtra("number", 1);
+                intent.putExtra("number", "42");
                 startActivity(intent);
             }
         });
