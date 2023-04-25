@@ -9,9 +9,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ShowActivity.class);
-              //  intent.putExtra("name", "Daniel"); // Optional
-               // intent.putExtra("number", 1); // Optional
+                intent.putExtra("name", "Daniel");
+                intent.putExtra("number", 1);
                 startActivity(intent);
             }
         });
