@@ -1,39 +1,35 @@
 
 # Rapport
 
-**Skriv din rapport här!**
+Forked the GitHub project.
+Created a second activity called ShowActivity.
+Added a button that opens the ShowActivity.
+Made MainActivity as parent, so you can go back to start from ShowActivity.
+Added 2 widgets in showactivity to show the values inserted in main.
 
-_Du kan ta bort all text som finns sedan tidigare_.
-
-## Följande grundsyn gäller dugga-svar:
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
+Below code declares the name and number variables by taking the values of what the user inserted in the main screen
+before pressing the sendbutton. And then shows it on the activityscreen.
 
 ```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
+Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String name = extras.getString("name");
+            String number = extras.getString("number");
+
+            TextView nameResult = findViewById(R.id.nameView);
+            nameResult.setText(name);
+
+            TextView sizeResult = findViewById(R.id.sizeView);
+            sizeResult.setText(number);
+            // Do something with the name and number
+        }
 ```
 
-Bilder läggs i samma mapp som markdown-filen.
+The first screenshots shows the main screen.
 
 ![](Screenshot1.png)
+
+After inserting whatever value, the show activity mirrors and shows the same values.
 ![](Screenshot2.png)
 
 Läs gärna:
